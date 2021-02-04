@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    background-image: linear-gradient(to top left, #753682 0%, #a08283 100%);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100vh;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    margin-top: 10%;
+    min-width: 750px;
+    border: none;
+    /* box-shadow: 0 8px 6px -6px black; */
+    border-radius: 20px;
+    
+}
+.player1 {
+    width: 100%;
+    background-color: rgba(218,175,189, 0.651);
+    color: black;
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+    font-family: 'Big Shoulders Display', cursive;
+}
+.player2 {
+    width: 100%;
+    color: black;
+    background-color: rgba(186,121,150,0.15);
+    text-align: center;
+    border-radius: 0px 20px 0px 0px;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.title {
+    padding-top: 15%;
+}
+.score1,.score2 {
+    margin-top: 10%;
+    font-size: 90px;
+}
+.newGame {
+    position: absolute;
+    background-color: white;
+    width: 10%;
+    min-width: 170px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 2%;
+    opacity: 0.5;
+    border: none;
+}
+.newGame:hover {
+    cursor: pointer;
+    box-shadow: 2px 3px 5px black;
+}
+
+.current {
+    width: 35%;
+    margin: auto;
+    background-color:brown;
+    opacity: 0.5;
+    height: 15vh;
+    border:none;
+    border-radius: 15px;
+    margin-top: 15%;
+    padding-top: 4%;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: large;
+}
+#current2, #current1 {
+    font-size: 40px;
+}
+.rollDice, .hold {
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    opacity: 0.5;
+    border: none;
+}
+.rollDice {
+    margin-top: 42vh;
+    width: 9%;
+    min-width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.hold {
+    margin-top: 50vh;
+    width: 7%;
+    min-width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.rollDice:hover {
+    cursor: pointer;
+    box-shadow: 2px 3px 5px black;
+}
+.hold:hover {
+    cursor: pointer;
+    box-shadow: 2px 3px 5px black;
+}
+.image {
+    position: absolute;
+    margin-top: 25vh;
+    margin-bottom: 3%;
+}
+.image img {
+    display: none;
+    width: 75px;
+    height: 75px;
+}
