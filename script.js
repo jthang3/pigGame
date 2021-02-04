@@ -68,17 +68,17 @@ rollDice.onclick = () => {
 holdDice.onclick = () => {
     if(firstPlayer){
         player1Score = score + player1Score;
-        current1.textContent = player1Score;
+        score1.textContent = player1Score;
     }
     else {
         player2Score = score + player2Score;
-        current2.textContent = player2Score;
+        score2.textContent = player2Score;
     }
     switchPlayer();
 }
 
 let switchPlayer = () => {
-    firstPlayer ? score1.textContent = 0: score2.textContent = 0;
+    firstPlayer ? current1.textContent = 0: current2.textContent = 0;
     firstPlayer = !firstPlayer;
     secondPlayer = !secondPlayer;
     score = 0;
@@ -86,10 +86,10 @@ let switchPlayer = () => {
 }
 
 let myFirst = (random,score) => {    
-        score1.textContent = score;
+        current1.textContent = score;
 }
 let mySecond = (random,score) => {
-    score2.textContent = score;
+    current2.textContent = score;
 }
 
 
@@ -97,6 +97,7 @@ let mySecond = (random,score) => {
 
 let newGame = document.querySelector(".newGame");
 newGame.onclick = () => {
+    imageTags[record].style.display = "none";
     randomStarter = Math.floor(Math.random() * Math.floor(2)) + 1;
     if(randomStarter === 1) {
         firstPlayer = true;
@@ -117,6 +118,8 @@ newGame.onclick = () => {
     current2.textContent = 0;
     player2Score = 0;
 }
+
+
 
 
 
