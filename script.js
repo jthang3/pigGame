@@ -54,25 +54,42 @@ changeColor();
 rollDice.onclick = () => {
     random = Math.floor(Math.random() * Math.floor(6)) + 1;
     imageTags[record].style.display = "none";
-    imageTags[random - 1].style.display = "block";
-    record = random - 1;
-    if(random === 1) {
-        switchPlayer();
+    if(player2Score < 100 && player1Score < 100){
+        imageTags[random - 1].style.display = "block";
+        record = random - 1;
+        if(random === 1) {
+            switchPlayer();
+        }
+        else {
+            score = score + random;
+        }
+        firstPlayer ? myFirst(random,score): mySecond(random,score);
     }
     else {
-        score = score + random;
+        alert("Games over. Please restart a new game!");
     }
-    firstPlayer ? myFirst(random,score): mySecond(random,score);
 }
 
 holdDice.onclick = () => {
     if(firstPlayer){
         player1Score = score + player1Score;
-        score1.textContent = player1Score;
+        if(player1Score >= 100){
+            score1.textContent = 100;
+            alert("Player 1 won the game!!");
+        }
+        else {
+            score1.textContent = player1Score;
+        }
     }
     else {
         player2Score = score + player2Score;
-        score2.textContent = player2Score;
+        if(player2Score >= 100){
+            score2.textContent = 100;
+            alert("Player 2 won the game!");
+        }
+        else {
+            score2.textContent = player2Score;
+        }
     }
     switchPlayer();
 }
